@@ -9,6 +9,8 @@
 
         <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
+        <link rel="stylesheet" href="bower_components/slick.js/slick/slick.css">
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -25,7 +27,174 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <h1>Camper Coffee.</h1>
+        <header>
+            <h1>Camper Coffee</h1>
+        </header>
+
+        <main>
+
+            <!--
+            *
+            * Banners
+            *
+            -->
+            <div id="camper-banners">
+                <div>Banner 1</div>
+                <div>Banner 2</div>
+                <div>Banner 3</div>
+            </div>
+
+            <!--
+            *
+            * Philosophy
+            *
+            -->
+            <div class="camper-philosophy">
+                <img src="http://placehold.it/50x50" alt="Camper coffee thinks coffee is like food.">
+                <h2>Coffee is<br>like food</h2>
+                <p>
+                    Irish carajillo, trifecta sweet cappuccino iced mocha ristretto. Crema brewed, seasonal sugar seasonal latte pumpkin spice galão turkish extra lungo extraction. Caffeine, espresso organic grounds dark viennese white. Cinnamon irish extra body eu doppio robusta cinnamon.
+                </p>
+            </div>
+            <div class="camper-philosophy">
+                <img src="http://placehold.it/50x50" alt="Camper coffee only uses original speicalty beans.">
+                <h2>Original<br>specialty beans</h2>
+                <p>
+                    Eu trifecta café au lait, mocha, saucer, chicory latte plunger pot iced arabica. Breve robusta, barista cultivar a lungo saucer acerbic coffee milk sugar. Decaffeinated half and half cup crema galão doppio viennese trifecta strong caffeine. Cinnamon a frappuccino, plunger pot, mazagran barista con panna extra breve.
+                </p>
+            </div>
+
+            <!--
+            *
+            * Map
+            *
+            -->
+            <div id="camper-map">
+                <a href="#" target="_blank">
+                    <img src="http://placehold.it/300x300" alt="Camper coffee is at Kent street New Market Auckland Central.">
+                </a>
+            </div>
+
+            <!--
+            *
+            * Survey
+            *
+            -->
+            <label>
+                <input type="checkbox">
+            </label>
+            <div class="">
+                <h2>Camping here?</h2>
+                <p>
+                    Tell us more about yourself.
+                </p>
+                <form>
+                    <!-- Age group -->
+                    <fieldset>
+                        <label>
+                            <input type="radio" name="age" value="10">
+                            10
+                        </label>
+                        <label>
+                            <input type="radio" name="age" value="20">
+                            20
+                        </label>
+                        <label>
+                            <input type="radio" name="age" value="30">
+                            30
+                        </label>
+                        <label>
+                            <input type="radio" name="age" value="infinite">
+                            Infinite
+                        </label>
+                    </fieldset>
+                    <!-- Gender -->
+                    <fieldset>
+                        <label>
+                            <input type="radio" name="gender" value="male">
+                            Male
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female">
+                            Female
+                        </label>
+                    </fieldset>
+                    <!-- Hobby -->
+                    <fieldset>
+                        <label>
+                            <input type="checkbox" name="hobby" value="drinking">
+                            Drinking
+                        </label>
+                        <label>
+                            <input type="checkbox" name="hobby" value="music">
+                            Music
+                        </label>
+                        <label>
+                            <input type="checkbox" name="hobby" value="photography">
+                            Photography
+                        </label>
+                        <label>
+                            <input type="checkbox" name="hobby" value="Romance">
+                            Romance
+                        </label>
+                        <br>
+                        <label>
+                            <input type="checkbox" name="hobby" value="sports">
+                            Sports
+                        </label>
+                        <label>
+                            <input type="checkbox" name="hobby" value="traveling">
+                            Traveling
+                        </label>
+                        <label>
+                            <input type="checkbox" name="hobby" value="driving">
+                            Driving
+                        </label>
+                        <label>
+                            <input type="checkbox" name="hobby" value="studying">
+                            Studying
+                        </label>
+                    </fieldset>
+                    <!-- Consumption amount -->
+                    <fieldset>
+                        <label>
+                            <input type="radio" name="quantity" value="once a week">
+                            Once a week
+                        </label>
+                        <label>
+                            <input type="radio" name="quantity" value="couple of times a week">
+                            Couple of times a week
+                        </label>
+                        <label>
+                            <input type="radio" name="quantity" value="all week">
+                            All week
+                        </label>
+                    </fieldset>
+                    <!-- Coffee type -->
+                    <fieldset>
+                        <label>
+                            <input type="radio" name="coffee" value="black">
+                            Black
+                        </label>
+                        <label>
+                            <input type="radio" name="coffee" value="white">
+                            White
+                        </label>
+                        <label>
+                            <input type="radio" name="coffee" value="filter">
+                            filter
+                        </label>
+                    </fieldset>
+                    <input type="button" value="Submit">
+                </form>
+            </div>
+
+        </main>
+
+        <footer>
+            <a href="#" target="_blank"><i>Facebook</i></a>
+            <a href="#" target="_blank"><i>Instagram</i></a>
+        </footer>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -39,12 +208,24 @@
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/slick.js/slick/slick.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#camper-banners').slick({
+                    arrows: false,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                    fade: true,
+                    dots: true
+                });
+            });
+        </script>
         <!-- endbuild -->
 </body>
 </html>
